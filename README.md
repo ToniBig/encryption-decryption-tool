@@ -15,6 +15,7 @@ This tool provides a simple and intuitive graphical user interface (GUI) for enc
 - Python 3.x
 - Tkinter (usually comes with Python)
 - `cryptography` package
+- `pyinstaller` package
 
 ## Installation
 
@@ -55,6 +56,7 @@ python app.py
 2. Enter the password used during encryption.
 3. Click the "<- Decrypt" button to view the decrypted text in the left text box.
 
+
 ### Security Note
 This tool is intended for educational use and should be applied with caution. The security level depends on the backend encryption algorithm.
 
@@ -63,3 +65,21 @@ If you're interested in contributing, please fork the repository and use a featu
 
 ### License
 This project is licensed under the MIT License.
+
+
+## Building the Executable with PyInstaller
+
+### Prerequisite
+Ensure PyInstaller is installed in your virtual environment. Installing all requirements as shown above should do the trick.
+
+### Build the Executable
+A spec file named endcrypt.spec is provided for building the application with PyInstaller. To create an executable, run the following command:
+
+```bash
+pyinstaller encrypt.spec
+```
+
+This will generate the executable in the dist directory.
+
+### Running the Executable
+Navigate to the dist folder and run the generated executable directly.
