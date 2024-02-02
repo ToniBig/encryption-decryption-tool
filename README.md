@@ -73,7 +73,13 @@ This project is licensed under the MIT License.
 Ensure PyInstaller is installed in your virtual environment. Installing all requirements as shown above should do the trick.
 
 ### Build the Executable
-A spec file named endcrypt.spec is provided for building the application with PyInstaller. To create an executable, run the following command:
+To create an executable for the first time, run the following command:
+
+```bash
+pyinstaller app.py --onefile --noconsole --name=endcrypt --icon=key.ico  --add-data "key.ico;."
+```
+
+Later you can just run the following command using the `spec` file created by `pyinstaller`
 
 ```bash
 pyinstaller encrypt.spec
