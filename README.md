@@ -9,6 +9,8 @@ This tool provides a simple and intuitive graphical user interface (GUI) for enc
 - **Text Decryption**: Decrypt encrypted text using the correct password.
 - **User-Friendly Interface**: Clean and straightforward UI for effortless interaction.
 
+![Example Image](example.png "This is an example of encrypting Hello, World!")
+
 ## Prerequisites
 - Python 3.x
 - Tkinter (usually comes with Python)
