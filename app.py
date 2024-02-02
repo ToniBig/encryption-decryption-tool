@@ -3,6 +3,9 @@ from crypto import *
 import tkinter as tk
 from tkinter import ttk, font
 
+import sys
+import os
+
 
 def run_app():
 
@@ -32,7 +35,17 @@ def run_app():
     # Set up the main window
     root = tk.Tk()
     root.title("Encryption/Decryption Tool")
-    root.iconbitmap("key.ico")
+
+    if getattr(sys, 'frozen', False):
+        # The application is frozen
+        base_path = sys._MEIPASS
+    else:
+        # The application is not frozen
+        base_path = os.path.dirname(__file__)
+
+    icon_path = os.path.join(base_path, 'key.ico')
+
+    root.iconbitmap(icon_path)
 
     # Use a more modern theme
     style = ttk.Style()
